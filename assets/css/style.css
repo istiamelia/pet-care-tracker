@@ -1,0 +1,125 @@
+/* CSS Reset */
+html,
+body,
+blockquote,
+code,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0;
+  padding: 0;
+}
+button,
+fieldset,
+form,
+input,
+legend,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+fieldset {
+  border: 0;
+}
+a,
+a * {
+  cursor: pointer;
+}
+div {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  text-align: left;
+}
+hr,
+img {
+  border: 0;
+}
+applet,
+iframe,
+object {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"],
+label {
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+
+/* General setup */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Login Page */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1592687864878-d008e52d69e9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-section {
+  background: rgba(
+    194,
+    194,
+    194,
+    0.6
+  ); /* Add semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  width: 500px;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
