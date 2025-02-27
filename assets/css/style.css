@@ -100,7 +100,7 @@ main {
   height: 100%;
 }
 
-.login-section {
+.login-signup-section {
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
   padding: 20px;
   border-radius: 15px;
@@ -114,7 +114,7 @@ main {
 }
 
 /* Optional: Adding a slight inner glow effect */
-.login-section::before {
+.login-signup-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -131,40 +131,40 @@ main {
   z-index: -1;
 }
 
-.login-section {
+.login-signup-section {
   display: flex;
   flex-direction: column;
   justify-content: baseline;
   align-items: center;
   gap: 5px;
 }
-.login-section h1 {
+.login-signup-section h1 {
   font-family: "Baloo 2", cursive;
   font-weight: 700;
   font-size: 2em;
   color: #ed5d56;
 }
-.login-section p,
-.login-section div p,
-.login-section div a {
+.login-signup-section p,
+.login-signup-section div p,
+.login-signup-section div a {
   font-size: 0.7em;
   color: white;
 }
-.login-section div a {
+.login-signup-section div a {
   color: #ed5d56;
   text-decoration: none;
   font-weight: bold;
 }
-.login-section div a:hover {
+.login-signup-section div a:hover {
   text-decoration: underline;
 }
-.login-section form {
+.login-signup-section form {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.login-section form input {
+.login-signup-section form input {
   background-color: #f3f4f6;
   width: 300px;
   height: 25px;
@@ -175,11 +175,11 @@ main {
   font-size: 0.7em;
 }
 
-.login-section form input::placeholder {
+.login-signup-section form input::placeholder {
   font-size: 0.7em;
 }
 
-.login-section form button {
+.login-signup-section form button {
   width: 100%;
   height: 25px;
   font-size: 0.7em;
@@ -193,7 +193,7 @@ main {
   transition: 0.3s;
 }
 
-.login-section form button:hover {
+.login-signup-section form button:hover {
   background-color: #6454d9bd;
 }
 
@@ -370,6 +370,7 @@ header button a {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding-bottom: 200px;
 }
 
 .about-us h1 {
@@ -403,8 +404,8 @@ header button a {
 
 .about-us a {
   margin-top: 25px;
-  padding: 12px 24px;
-  font-size: 1em;
+  padding: 6px 12px;
+  font-size: 0.8em;
   font-weight: 500;
   text-decoration: none;
   color: white;
@@ -470,4 +471,99 @@ header button a {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+/* Contact Us */
+
+.contact-us {
+  max-width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #222;
+}
+
+.contact-us p {
+  font-size: 0.8em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.name-fields div {
+  flex: 1;
+}
+
+.contact-us label {
+  text-align: left;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: #444;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-us input,
+.contact-us textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  background: #f8f8f8;
+  transition: 0.3s ease-in-out;
+}
+.contact-us input::placeholder {
+  font-size: 0.7em;
+}
+
+.contact-us input:focus,
+.contact-us textarea:focus {
+  border-color: #6354d9;
+  background: white;
+  box-shadow: 0 0 8px rgba(99, 84, 217, 0.3);
+}
+
+.contact-us button {
+  align-self: center;
+  padding: 12px;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: white;
+  background: #6354d9;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-us button:hover {
+  background: #4c3bbd;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(99, 84, 217, 0.3);
 }
