@@ -150,7 +150,12 @@ main {
   color: white;
 }
 .login-section div a {
-  color: #6354d9;
+  color: #ed5d56;
+  text-decoration: none;
+  font-weight: bold;
+}
+.login-section div a:hover {
+  text-decoration: underline;
 }
 .login-section form {
   margin-top: 20px;
