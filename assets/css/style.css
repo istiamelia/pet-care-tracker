@@ -197,7 +197,8 @@ main {
   background-color: #6454d9bd;
 }
 .alertEmailDiv p,
-.alertPwdDiv p {
+.alertPwdDiv p,
+.alertUsernameDiv p {
   color: red !important;
   margin-bottom: 5px;
   font-size: 0.7em !important;

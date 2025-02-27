@@ -20,15 +20,25 @@
           <input
             type="text"
             name="username"
+            id="username"
             placeholder="Enter your username"
           />
-          <input type="text" name="email" placeholder="Enter your email" />
+          <div class="alertUsernameDiv"></div>
           <input
             type="text"
+            name="email"
+            placeholder="Enter your email"
+            id="email"
+          />
+          <div class="alertEmailDiv"></div>
+          <input
+            type="password"
             name="password"
             placeholder="Enter your password"
+            id="password"
           />
-          <button>Signup</button>
+          <div class="alertPwdDiv"></div>
+          <button type="submit" class="submitBtn">Signup</button>
         </form>
         <div>
           <p>
@@ -39,4 +49,5 @@
       </section>
     </main>
   </body>
+  <script src="assets/js/index.js"></script>
 </html>
