@@ -205,6 +205,11 @@ header {
   align-items: center;
   padding: 2px 15px 2px 15px;
   gap: 30px;
+  border-bottom: rgba(128, 128, 128, 0.628) 0.5px solid;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: white;
 }
 header h2 {
   font-family: "Baloo 2", cursive;
@@ -352,4 +357,117 @@ header button a {
 .landing-page button a {
   text-decoration: none;
   color: white;
+}
+
+/* About Us Page */
+.about-us {
+  max-width: 800px;
+  margin: 250px auto;
+  text-align: center;
+  background: white;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-us h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.about-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-us ul li {
+  font-size: 0.8em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.about-us ul li:last-child {
+  border-bottom: none;
+}
+
+.about-us a {
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  background: #6354d9;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.about-us a:hover {
+  background: #4c3bbd;
+}
+
+.img-container {
+  display: flex;
+}
+
+.about-us img {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #f3f4f62f;
+  border-radius: 50%;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
