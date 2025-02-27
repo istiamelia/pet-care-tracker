@@ -12,7 +12,7 @@ const alertUsername = document.createElement("p");
 submitBtn.addEventListener("click", (event) => {
   let emailInputVal = document.querySelector("#email").value;
   let passwordInputVal = document.querySelector("#password").value;
-  let usernameInputVal = document.querySelector("#username").value;
+  let usernameInputVal = usernameInput ? usernameInput.value : null; // Check if it exists
   if (!emailInputVal) {
     alertEmail.innerHTML = "Your email is still empty";
     alertEmailDiv.append(alertEmail);
@@ -23,7 +23,7 @@ submitBtn.addEventListener("click", (event) => {
     alertPwdDiv.append(alertPwd);
     event.preventDefault();
   }
-  if (!usernameInputVal) {
+  if (usernameInput && !usernameInputVal) {
     alertUsername.innerHTML = "Your username is still empty";
     alertUsernameDiv.append(alertUsername);
     event.preventDefault();
@@ -48,12 +48,15 @@ passwordInput.addEventListener("input", (event) => {
     alertPwd.innerHTML = ""; // Clears the message if input is filled
   }
 });
-usernameInput.addEventListener("input", (event) => {
-  let InputVal = event.target.value;
-  if (!InputVal) {
-    alertUsername.innerHTML = "Your username is still empty";
-    alertUsernameDiv.append(alertUsername);
-  } else {
-    alertUsername.innerHTML = ""; // Clears the message if input is filled
-  }
-});
+
+if (usernameInput) {
+  usernameInput.addEventListener("input", (event) => {
+    let InputVal = event.target.value;
+    if (!InputVal) {
+      alertUsername.innerHTML = "Your username is still empty";
+      alertUsernameDiv.append(alertUsername);
+    } else {
+      alertUsername.innerHTML = ""; // Clears the message if input is filled
+    }
+  });
+}
