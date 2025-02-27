@@ -138,10 +138,11 @@ main {
   align-items: center;
   gap: 5px;
 }
-.login-signup-section h1 {
+.login-signup-section h1 a {
+  text-decoration: none;
   font-family: "Baloo 2", cursive;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #ed5d56;
 }
 .login-signup-section p,
@@ -218,7 +219,8 @@ header {
   overflow: hidden;
   background-color: white;
 }
-header h2 {
+header h2 a {
+  text-decoration: none;
   font-family: "Baloo 2", cursive;
   font-weight: 700;
   color: #ed5d56;
