@@ -16,13 +16,21 @@
         <h1>PawTrack</h1>
         <p>Securely Access your personalized pet management.</p>
         <form action="">
-          <input type="text" name="email" placeholder="Your email address" />
           <input
             type="text"
+            name="email"
+            id="email"
+            placeholder="Your email address"
+          />
+          <div class="alertEmailDiv"></div>
+          <input
+            id="password"
+            type="password"
             name="password"
             placeholder="Enter your password"
           />
-          <button>Login</button>
+          <div class="alertPwdDiv"></div>
+          <button type="submit" class="login">Login</button>
         </form>
         <div>
           <p>
@@ -33,4 +41,40 @@
       </section>
     </main>
   </body>
+  <script>
+    const loginBtn = document.querySelector(".login");
+    const emailInput = document.querySelector("#email");
+    const passwordInput = document.querySelector("#password");
+    const alertEmailDiv = document.querySelector(".alertEmailDiv");
+    const alertEmail = document.createElement("p");
+    const alertPwdDiv = document.querySelector(".alertPwdDiv");
+    const alertPwd = document.createElement("p");
+
+    loginBtn.addEventListener("click", (event) => {
+      let emailInputVal = document.querySelector("#email").value;
+      const passwordInputVal = document.querySelector("#password").value;
+      if (!emailInputVal || !passwordInputVal) {
+        event.preventDefault();
+      }
+    });
+
+    emailInput.addEventListener("input", (event) => {
+      let InputVal = event.target.value;
+      if (!InputVal) {
+        alertEmail.innerHTML = "Your email is still empty";
+        alertEmailDiv.append(alertEmail);
+      } else {
+        alertEmail.innerHTML = ""; // Clears the message if input is filled
+      }
+    });
+    passwordInput.addEventListener("input", (event) => {
+      let InputVal = event.target.value;
+      if (!InputVal) {
+        alertPwd.innerHTML = "Your password is still empty";
+        alertPwdDiv.append(alertPwd);
+      } else {
+        alertPwd.innerHTML = ""; // Clears the message if input is filled
+      }
+    });
+  </script>
 </html>
